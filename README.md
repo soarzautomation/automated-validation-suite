@@ -203,16 +203,13 @@ git clone https://github.com/soarzautomation/automated-validation-suite.git
 cd automated-validation-suite
 
 # Run validation on sample simulation files
-python scripts/validation_engine.py sample_data/fluid_dynamics_model/
+python scripts/validation_engine.py sample_models/valid_fluid_model/
 
-# Generate comprehensive validation report
-python scripts/generate_report.py sample_data/fluid_dynamics_model/ --output-format html
-
-# View detailed error analysis
-python scripts/error_analyzer.py demo_output/validation_results.json
-
-# Run interactive GUI demo
+# Run interactive GUI demo (recommended)
 python scripts/demo.py
+
+# Create sample models for testing
+python scripts/create_sample_models.py demo_output/sample_models
 ```
 
 ### Custom Implementation
